@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SvgEditorClass</class>
+ <widget class="QMainWindow" name="SvgEditorClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>464</width>
+    <height>269</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>610</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SvgDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="minimumSize">
+    <size>
+     <width>464</width>
+     <height>269</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1000</width>
+     <height>610</height>
+    </size>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1001</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout" columnstretch="5,87,8">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="leftMargin">
+      <number>13</number>
+     </property>
+     <property name="topMargin">
+      <number>13</number>
+     </property>
+     <property name="rightMargin">
+      <number>13</number>
+     </property>
+     <property name="bottomMargin">
+      <number>13</number>
+     </property>
+     <property name="horizontalSpacing">
+      <number>14</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QWidget" name="svgWidget" native="true">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,1,0,0,1,0,0,0,0,8">
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="rowWrapPolicy">
+          <enum>QFormLayout::WrapAllRows</enum>
+         </property>
+         <property name="horizontalSpacing">
+          <number>0</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>8</number>
+         </property>
+         <item row="2" column="0">
+          <widget class="QLabel" name="Label">
+           <property name="text">
+            <string>宽度：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="svgWidth">
+           <property name="maxLength">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="Label_2">
+           <property name="text">
+            <string>高度</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="svgHeight">
+           <property name="maxLength">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>SVG画布设置 </string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>缩放</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="scaleSvgSlider">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="pageStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>10</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="changeSvgBgButton">
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>更改图形背景色</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="fillColorButton">
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>更改图形填充颜色</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>使用提示：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="text">
+          <string>1，选择模式下，选中图形后，按Delete键可以删除图形。
+2，选择模式下，可以拖动图形移动位置。
+3，按住Ctrl键，滑动鼠标中键可以放大缩小。</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="0">
+      <widget class="QToolBar" name="mainToolBar">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="movable">
+        <bool>false</bool>
+       </property>
+       <property name="allowedAreas">
+        <set>Qt::LeftToolBarArea</set>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <action name="actionSelect">
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="icon">
+         <iconset resource="svgeditor.qrc">
+          <normaloff>:/select.svg</normaloff>:/select.svg</iconset>
+        </property>
+        <property name="text">
+         <string>select</string>
+        </property>
+        <property name="toolTip">
+         <string>选择</string>
+        </property>
+       </action>
+       <action name="actionLine">
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="icon">
+         <iconset resource="svgeditor.qrc">
+          <normaloff>:/line.svg</normaloff>:/line.svg</iconset>
+        </property>
+        <property name="text">
+         <string>line</string>
+        </property>
+        <property name="toolTip">
+         <string>直线</string>
+        </property>
+       </action>
+       <action name="actionRect">
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="icon">
+         <iconset resource="svgeditor.qrc">
+          <normaloff>:/rectangle.svg</normaloff>:/rectangle.svg</iconset>
+        </property>
+        <property name="text">
+         <string>line</string>
+        </property>
+        <property name="toolTip">
+         <string>直线</string>
+        </property>
+       </action>
+       <action name="actionCurve">
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="icon">
+         <iconset resource="svgeditor.qrc">
+          <normaloff>:/curve.svg</normaloff>:/curve.svg</iconset>
+        </property>
+        <property name="text">
+         <string>curve</string>
+        </property>
+        <property name="toolTip">
+         <string>自由线</string>
+        </property>
+       </action>
+       <action name="actionText">
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="icon">
+         <iconset resource="svgeditor.qrc">
+          <normaloff>:/text.svg</normaloff>:/text.svg</iconset>
+        </property>
+        <property name="text">
+         <string>text</string>
+        </property>
+        <property name="toolTip">
+         <string>文本</string>
+        </property>
+       </action>
+       <action name="actionoHexagon">
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="icon">
+         <iconset resource="svgeditor.qrc">
+          <normaloff>:/polygon.svg</normaloff>:/polygon.svg</iconset>
+        </property>
+        <property name="text">
+         <string>Hexagon</string>
+        </property>
+        <property name="toolTip">
+         <string>六边形</string>
+        </property>
+       </action>
+       <action name="actionCircle">
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="icon">
+         <iconset resource="svgeditor.qrc">
+          <normaloff>:/circle.svg</normaloff>:/circle.svg</iconset>
+        </property>
+        <property name="text">
+         <string>circle</string>
+        </property>
+        <property name="toolTip">
+         <string>圆</string>
+        </property>
+       </action>
+       <addaction name="actionSelect"/>
+       <addaction name="separator"/>
+       <addaction name="actionLine"/>
+       <addaction name="separator"/>
+       <addaction name="actionRect"/>
+       <addaction name="separator"/>
+       <addaction name="actionCurve"/>
+       <addaction name="separator"/>
+       <addaction name="actionText"/>
+       <addaction name="separator"/>
+       <addaction name="actionCircle"/>
+       <addaction name="separator"/>
+       <addaction name="actionoHexagon"/>
+       <addaction name="separator"/>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="newFile"/>
+    <addaction name="openFile"/>
+    <addaction name="saveFile"/>
+    <addaction name="separator"/>
+    <addaction name="exitApp"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>关于</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="openFile">
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="newFile">
+   <property name="text">
+    <string>新建</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="saveFile">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="exitApp">
+   <property name="text">
+    <string>退出应用</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="svgeditor.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>openFile</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onOpenFileTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>newFile</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onNewFileTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLine</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onActionLineTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRect</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onActionRectTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>425</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>svgWidth</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onSvgWidthTextEdited(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>983</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scaleSvgSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onScaleSvgValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>984</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scaleSvgSlider</sender>
+   <signal>sliderReleased()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onScaleSvgValueReleased()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>984</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>changeSvgBgButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onChangeSvgBgClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>984</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>svgHeight</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onSvgHeightTextEdited(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>947</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSelect</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onActionSelectTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCurve</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onActionCurveTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionText</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onActionTextTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionoHexagon</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onActionHexagonTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCircle</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onActionCircleTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fillColorButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onFillColorButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>944</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveFile</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onSaveFileTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exitApp</sender>
+   <signal>triggered()</signal>
+   <receiver>SvgEditorClass</receiver>
+   <slot>onExitAppTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
